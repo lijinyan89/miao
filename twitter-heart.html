@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>twitter heart</title>
+  <style>
+    label {
+      display:inline-block;
+      margin:0;
+      border:1px solid;
+      box-sizing:border-box;
+      height: 100px;
+      width:100px;
+      background-image:url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png);
+    }
+
+    label:hover {
+      transition: background-position  0.46666s linear ;
+      background-position: right 0;
+    }
+  </style>
+</head>
+<body>
+  <input hidden type="checkbox" name="twitter" id= "heart">
+  <label for="heart"><img src="" alt=""></label>
+</body>
+</html>
