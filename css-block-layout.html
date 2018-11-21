@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-block-layout</title>
+  <style>
+    html, body {
+      height:100%;
+      margin:0; 
+    }
+    header {
+      background-color:black;
+      color:white;
+      height:30px;
+    }
+    span {
+      margin-left:calc(50% - 300px);
+    }
+   
+    main {
+      width:600px;
+      margin-left:auto;
+      margin-right:auto;  
+    }
+    ul {
+      margin:0;
+      padding:0;
+    }
+    li {
+      list-style-type:none;
+      box-sizing:border-box;
+      background-color: #ffbbc9;
+      width:180px;
+      height:40px;
+      border:3px solid;
+      margin-bottom:15px;
+    }
+    li:hover {
+      background-color: #ff0000;
+    }
+    li:nth-child(n+5) {
+      margin-left:210px;
+    }
+    li:nth-child(n+9) {
+      margin-left:420px;
+    }
+    li:nth-child(4n+5) {
+      margin-top:-220px;
+    }
+    a {
+      display:block;
+      border-bottom:1px dotted; 
+    }
+    a:last-child {
+      border-bottom:none;
+      margin-bottom:-5px;
+    }
+    footer {
+      background-color: #ff6bf2;
+    }
+    footer > p {
+      text-align:center;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <span>hello world 请调整浏览器窗口大小查看</span>
+  </header>
+  <main>
+    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div>
+      <a>link</a>
+      <a>link</a>
+      <a>link</a>
+      <a>link</a>
+      <a>link</a>
+    </div> 
+  </main>
+  <footer>
+    <p>
+      ©版权所有<br>
+      本页所有布局均使用块元素
+    </p>
+  </footer>
+</body>
+</html>
