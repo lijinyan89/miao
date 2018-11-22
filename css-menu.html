@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Google Chrome</title>
+  <style>
+    * {
+      background-color:rgb(0,0,0,0.05);
+    }
+    html,body {
+      height: 100%;
+      margin:0;
+    }
+    div > ul {
+      display:block;
+    }
+    ul {
+      list-style:none;
+      padding:0;
+      display:inline-block;
+      background-color: #252525;
+      color:#e8e8e8;
+    }
+    ul ul > li {
+      display:none;
+      position:relative;
+      white-space:nowrap;
+      padding-right:20px; 
+    }
+
+    ul ul  {
+      display:inline-block;
+      position:absolute;
+      left:0;
+      top:100%;
+      padding-left:20px;
+      padding-right:20px;
+    }
+    li:hover {
+      background-color: #0142e2;
+    }
+
+    li:hover > ul > li {
+      display:block;
+    }
+    div > ul > li {
+      display:inline-block;
+      padding-left:8px;
+      position:relative;
+    }
+    img {
+      height: 35px;
+      width:48px;
+      vertical-align:middle;
+    }
+    ul ul ul {
+      position:absolute;
+      left:100%;
+      top:0;
+      margin-right:50px;
+    }
+    ul ul ul:before {
+      content:">";
+      position:absolute;
+      right:100%;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>
+        <img src="https://e.allegroimg.com/s512/01ecef/39c0f1f04c8b85ccc7615886801e" alt="苹果">
+        
+        <ul>
+          <li>关于本机</li>
+          <li>系统偏好设置</li>
+          <li>App Store</li>
+          <li>最近使用的项目
+              <ul>
+                <li>QQ</li>
+                <li>网易音乐云</li>
+              </ul>
+          </li>
+          <li>强制退出"Chrome"</li>
+          <li>睡眠</li>
+          <li>重新启动</li>
+          <li>关机</li>
+          <li>锁定屏幕</li>
+          <li>退出登陆</li>
+        </ul>
+      </li>
+      <li>Chrome
+        <ul>
+          <li>关于Google Chrome</li>
+          <li>偏好设置</li>
+          <li>清除浏览数据</li>
+          <li>导入书签和设置</li>
+          <li>服务</li>
+          <li>隐藏Google Chrome</li>
+          <li>隐藏其他应用</li>
+          <li>显示全部</li>
+          <li>退出前提示</li>
+          <li>退出并保留窗口</li>
+        </ul>
+      </li>
+      <li>文件
+          <ul>
+            <li>新标签页</li>
+            <li>打开新的窗口</li>
+            <li>打开新的无痕式窗口</li>
+            <li>重新打开新的标签页</li>
+            <li>打开文件</li>
+            <li>打开位置</li>
+            <li>关闭窗口</li>
+            <li>关闭标签页</li>
+            <li>页面存储为</li>
+            <li>分享</li>
+            <li>使用系统对话框进行打印</li>
+          </ul>
+      <li>编辑
+          <ul>
+            <li>撤销</li>
+            <li>重做</li>
+            <li>剪切</li>
+            <li>复制</li>
+            <li>粘贴</li>
+            <li>粘贴并匹配样式</li>
+            <li>删除</li>
+            <li>全选</li>
+            <li>查找
+              <ul>
+                <li>搜索网页</li>
+                <li>查找</li>
+                <li>查找上一个</li>
+                <li>查找下一个</li>
+                <li>使用所选内容查找</li>
+                <li>跳到所选部分</li>
+              </ul>
+            </li>
+            <li>拼写和语法</li>
+            <li>语音</li>
+            <li>开始听写</li>
+            <li>表情与符号</li>
+          </ul>
+      </li>
+      <li>视图
+          <ul>
+            <li>总是显示书签栏</li>
+            <li>在全屏模式下始终显示工具栏</li>
+            <li>停止</li>
+            <li>强制重新加载此页</li>
+            <li>进入全屏幕</li>
+            <li>实际大小</li>
+            <li>放大</li>
+            <li>缩小</li>
+            <li>投射</li>
+            <li>开发者</li>
+          </ul>
+      </li>
+      <li>历史记录
+          <ul>
+            <li>首页</li>
+            <li>后退</li>
+            <li>前进</li>
+            <li>最近关闭的标签页</li>
+            <li>最近访问过的内容</li>
+            <li>显示所有历史记录</li>
+          </ul>
+      </li>
+      <li>书签
+          <ul>
+            <li>书签管理器</li>
+            <li>为此页添加标签</li>
+            <li>为所有标签页添加标签</li>
+            <li>移动设备书签</li>
+          </ul>
+      </li>
+      <li>用户
+          <ul>
+            <li>用户名</li>
+            <li>编辑</li>
+            <li>添加用户</li>
+          </ul>
+      </li>
+      <li>窗口
+          <ul>
+            <li>全部最小化</li>
+            <li>全部缩放</li>
+            <li>选择下一个标签</li>
+            <li>选择上一个标签</li>
+            <li>复制标签</li>
+            <li>将单个网页静音</li>
+            <li>固定标签页</li>
+            <li>下载内容</li>
+            <li>扩展程序</li>
+            <li>任务管理器</li>
+            <li>排在前面</li>
+          </ul>
+      </li>
+      <li>帮助
+          <ul>
+            <li>搜索
+              <input type="text">
+            </li>
+            <li>报告问题</li>
+            <li>Google Chrome帮助</li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
