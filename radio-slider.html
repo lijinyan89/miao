@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>  
+    html body {
+      margin:50px;
+    }
+    .slider {
+      font-size:50%;
+      position:relative;
+      width: 300px;
+      height: 420px;
+      border:1px solid;
+      margin:auto;
+      text-align:center;
+      padding-top:25px;
+      box-sizing:border-box;
+    }
+    h2 {
+      font-size:16px;
+      color:#83c44e;
+    }
+    h4 > a {
+      font-size:20px;
+      color: #333333;
+      text-decoration:none;
+    }
+    p > a {
+      font-size:12px;
+      color:#b0b0b0;
+      line-height: 21px;
+      text-decoration:none;
+    }
+    div > img {
+      position:absolute;
+      margin-left:40px;
+      left:200%;
+      bottom:60px;
+      visibility:hidden;
+
+    }
+
+    input {
+      position:relative;
+      top:400px;
+      z-index:5;
+      display:none;
+    }
+    .slider > section {
+      position:absolute;
+      bottom:25px;
+      width:100%;
+      text-align:center;
+    }
+    section > label {
+      padding:6px;
+    }
+    section > label > div {
+      display:inline-block;
+      height: 0px;
+      width: 0px;
+      border:3px solid ;
+      color:grey;
+      margin-left:10px;
+      margin-right:10px;
+    }
+    input:checked + * + * + * + div > img {
+      transition: margin-left 7s linear;
+      left:0;
+      visibility:visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <h2>MIUI 主题</h2>
+    <h4><a href="http://zhuti.xiaomi.com/detail/31c6176f-5772-45fa-9df9-d86d2bae1e4a">熊本熊 酷MA萌</a></h4>
+    <p><a href="http://zhuti.xiaomi.com/detail/31c6176f-5772-45fa-9df9-d86d2bae1e4a">戳一戳、摸一摸，酷MA萌会在锁屏跟<br>你亲密互动哦。</a></p>
+    <input type="radio" name="mi" id="p1" checked>
+    <input type="radio" name="mi" id="p2">
+    <input type="radio" name="mi" id="p3">
+    <input type="radio" name="mi" id="p4">
+    <div>
+      <img src="https://i1.mifile.cn/a4/xmad_15360565735203_Uuvyd.jpg" alt="">
+    </div>
+    <div>
+      <img src="https://i1.mifile.cn/a4/xmad_15357000957252_GpoLc.png" alt="">
+    </div>
+    <div>
+      <img src="https://i1.mifile.cn/a4/xmad_15290561352349_zNjLT.png" alt="">
+    </div>
+    <div>
+      <img src="https://s01.mifile.cn/i/index/more-miui.jpg" alt="">
+    </div>
+    <section>
+      <label for="p1"><div></div></label>
+      <label for="p2"><div></div></label>
+      <label for="p3"><div></div></label>
+      <label for="p4"><div></div></label>
+  </section>
+    <aside>
+    </aside>
+  </div>
+</body>
+</html>
