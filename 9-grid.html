@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>9-grid</title>
+  <style>
+    /*solution1: 用阴影做 box-shadow */
+    .s1 {
+      height: 165px;
+      width: 165px; 
+      border:2.5px solid blue;
+    }
+    .s1 span {
+      float:left;
+      height: 50px;
+      width: 50px;
+      border:2.5px solid blue;
+      position:relative;
+    }
+    .s1 span:hover {
+      border-color:red;
+      box-shadow: 0 0 0 2.5px red; 
+      z-index:8;
+    }
+  
+  /* 使用表格布局，合并边框  */
+  .s2 table {
+    height: 165px;
+    width: 165px; 
+    border:2.5px solid blue;
+    border-collapse:collapse;
+  }
+  .s2 td {
+    width: 50px;
+    height: 50px;
+    
+  }
+  .s2 tr,col {
+    border:5px solid blue;
+  }
+  .s2 td:hover {
+    border:5px solid red;
+  }
+  
+  /* margin 上移，左移，重叠边框   */
+  .s3 {
+    height: 170px;
+    width: 170px; 
+    padding-bottom:5px;
+    list-style:none;
+    margin-left:-40px;
+
+  }
+  .s3 li {
+    margin-right:-5px;
+    margin-bottom:-5px;
+    float:left;
+    position:relative;
+    height: 50px;
+    width: 50px;
+    border:5px solid blue;
+  }
+  .s3 li:hover {
+    border-color:red;
+    z-index:5;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="s1">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+  </div>
+  <hr>
+  <div class="s2">
+    <table>
+      <col>
+      <col>
+      <col>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  
+<ol class="s3">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+</body>
+</html>
