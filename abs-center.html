@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>abs-center</title>
+  <style>
+  
+    span { 
+      border:3px solid green;
+    }
+    
+    /*   solution1:设置line-height与高度等高    */
+    
+    .s1 {
+      height: 200px;
+      width: 300px;
+      border:5px solid red;
+      text-align: center;
+      line-height: 200px;
+    }
+    .s1 span {
+      position:relative;
+      
+    }
+  
+/* solution2: 表格  */
+
+.s2 {
+  height: 200px;
+  width: 300px;
+  border:5px solid red;
+  text-align: center;
+  display:table;
+  padding:100px;
+}
+.s2 span {
+  height: 5px;
+  width: 3px;
+  display:table-cell;
+  position:relative;
+  vertical-align:middle;
+}
+
+/*  solution3: 相对定位，margin为auto     */
+
+.s3 {
+  height: 200px;
+  width: 300px;
+  border:5px solid red;
+  text-align: center;
+  position:relative;
+}
+.s3 span {
+  height: 30px;
+  width: 50px;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="s1">
+    <span>foo</span>
+    
+  </div>
+  <hr>
+  <div class="s2">
+    <span>bar</span>
+  </div>
+  <hr>
+  <div class="s3">
+    <span>baz</span>
+  </div>
+</body>
+</html>
