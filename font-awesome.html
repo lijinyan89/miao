@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>font-awesome</title>
+  
+  <style>
+    @font-face {
+  font-family:'font-awesome';
+  src:url(/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf);
+  src:url(/font-awesome-4.7.0/fonts/fontawesome-webfont.svg),url(/font-awesome-4.7.0/fonts/FontAwesome.otf),url(/font-awesome-4.7.0/fonts/FontAwesome.otf),url(/font-awesome-4.7.0/fonts/fontawesome-webfont.eot),url(/font-awesome-4.7.0/fonts/fontawesome-webfont.woff),url(/font-awesome-4.7.0/fonts/fontawesome-webfont.woff);
+  font-style:normal;
+  font-weight:normal;
+  font-size:14px;
+}
+
+.fa {
+  display:inline-block;
+  font-size:inherit;
+  text-align:center;
+}
+
+.fa-camera-retro:before {
+  content:"\f083";
+}
+
+.fa-lg {
+  font-size:1.33em;
+  line-height: 0.75em;
+  vertical-align:-0.15em;
+}
+.fa-2x {
+ font-size:2em;
+}
+.fa-3x {
+  font-size:3em;
+}
+.fa-4x {
+  font-size:4em;
+}
+.fa-5x {
+  font-size:5em;
+}
+
+.fa-home:before {
+  content:"\f015";
+}
+.fa-book:before {
+  content:'\f02d';
+}
+.fa-pencil:before {
+  content:'\f040';
+}
+.fa-cog:before {
+  content:'\f013';
+}
+.fa-fw {
+  font-size:1.3em;
+  width: 1em;
+  vertical-align:middle;
+}
+
+.fa-ul {
+  display:block;
+  list-style:none; 
+  padding-left:0;
+  margin-left:2em;
+}
+.fa-li { 
+  display:inline-block;
+  text-align:center;
+  margin-bottom:0.5em;
+}
+.fa-check-square:before {
+  content:'\f14a';
+}
+.fa-spinner:before {
+  content:'\f110';
+}
+.fa-spin {
+  animation: fa-spin 2s infinite  linear;
+  animation-play-state: running;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(359deg);
+  }
+}
+ 
+.fa-square:before {
+  content:'\f0c8';
+}
+
+.fa-quote-left:before {
+  content:'\f10d';
+}
+
+.fa-pull-left {
+  float:left;
+  padding:0.2em;
+  margin:0.2em;
+}
+.fa-border {
+  border:5px solid #ebebeb;
+  border-radius:5% 5%;
+}
+  
+body {
+  margin:30px;
+}
+  i {
+    font-family:font-awesome;
+    font-style:normal;
+  }
+  .basic {
+    color:#2d2d2d;
+  }
+  .larger i {
+    color:#2d2d2d;
+    padding-bottom:20px;
+  }
+.fw a {
+  text-decoration: none;
+  color:#4b4b4b;
+  display:block;
+  margin:20px;
+}
+.border-pulled > p {
+  width: 340px;
+}
+  
+  </style>
+</head>
+<body>
+  
+  <!-- 1 Basic Icons -->
+  <div>
+    <p class="basic">
+      <i class="fa fa-camera-retro"></i>&nbsp;fa-camera-retro
+    </p>
+  </div>
+  <hr>
+  
+  <!-- 2 Larger Icons -->
+  <div>
+      <p class="larger">
+        <i class="fa fa-camera-retro fa-lg"></i>&nbsp;fa-lg
+        <br>
+        <i class="fa fa-camera-retro fa-2x"></i>&nbsp;fa-2x
+        <br>
+        <i class="fa fa-camera-retro fa-3x"></i>&nbsp;fa-3x
+        <br>
+        <i class="fa fa-camera-retro fa-4x"></i>&nbsp;fa-4x
+        <br>
+        <i class="fa fa-camera-retro fa-5x"></i>&nbsp;fa-5x
+        <br>
+      </p>
+  </div>
+  <hr>
+    
+  <!-- 3 Fixed Width Icons -->
+  <div class="fw">
+    <a href="">
+      <i class="fa fa-fw fa-home"></i>
+      &nbsp;Home
+    </a>
+    <a href="">
+      <i class="fa fa-fw fa-book"></i>
+      &nbsp;Library
+    </a>
+    <a href="">
+      <i class="fa fa-fw fa-pencil"></i>
+      &nbsp;Applications
+    </a>
+    <a href="">
+      <i class="fa fa-fw fa-cog"></i>
+      &nbsp;Settings
+    </a>
+  </div>
+  <hr>
+  
+  <!-- 4 Listed Icons -->
+  <div>
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-check-square"></i>&nbsp;&nbsp;List icons</li>
+      <li><i class="fa-li fa fa-check-square"></i>&nbsp;&nbsp;can be used</li>
+      <li><i class="fa-li fa fa-spinner fa-spin"></i>&nbsp;&nbsp;as bullets</li>
+      <li><i class="fa-li fa fa-square"></i>&nbsp;&nbsp;in lists</li>
+    </ul>
+  </div>
+  <hr>
+
+  <!-- 5 Bordered & Pulled Icons -->
+  <div class="border-pulled">
+    <p>
+      <i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>…tomorrow we will run faster, stretch out our arms farther… And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past.
+    </p>
+  </div>
+</body>
+</html>
