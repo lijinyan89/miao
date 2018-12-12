@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ballon.css</title>
+  <style>
+    html, body {
+      background-color: rgb(255, 215, 72);
+    }
+    section {
+      width: 100vw;
+      display: block;
+      padding:30px;   
+    }
+    div {
+      display: block;
+      width: 160px;
+      height: 46.78px;
+      background-color: rgb(255, 61, 46);
+      color:white;
+      border-radius:5px;
+      text-align:center;
+      line-height:46.78px;
+      font-size:16px;
+      font-weight:400;
+      position: relative;
+      margin-left:150px;
+      margin-top:50px;
+       
+    }
+    div:hover {
+      background-color: #db160c;
+    }
+
+    .up:before {
+      content:"";
+      width: 1px;
+      height: 0;
+      border:7px solid;
+      border-top-color:black;
+      border-left-color:transparent;
+      border-right-color:transparent;
+      border-bottom-color:transparent;
+      position: absolute;
+      top:0;
+      left:70px;   
+      display: none;
+    }
+    .up:after {
+      text-align:center;
+      content:"Whats up!";
+      background-color: black;
+      border-radius:5px;
+      font-size:10px;
+      white-space: nowrap;
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      top:-50px;
+      left:40px;
+      margin-left:auto;
+      margin-right:auto;
+      visibility:hidden;
+    }
+  .up:hover:before {
+    transform:translateY(-20px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .up:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  .down:before {
+      content:"";
+      width: 1px;
+      height: 0;
+      border:7px solid;
+      border-bottom-color:black;
+      border-top-color:transparent;
+      border-right-color:transparent;
+      border-left-color:transparent;
+      position: absolute;
+      top:34px;
+      left:70px;   
+      display: none;
+    }
+    .down:after {
+      text-align:center;
+      content:"Whats up!";
+      background-color: black;
+      border-radius:5px;
+      font-size:10px;
+      white-space: nowrap;
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      top:60px;
+      left:40px;
+      margin-left:auto;
+      margin-right:auto;
+      visibility:hidden;
+    }
+  .down:hover:before {
+    transform:translateY(12px);
+    transition: 1.5s linear;
+    display: inline-block;
+  }
+  .down:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  
+  .left:before {
+      content:"";
+      width: 1px;
+      height: 0;
+      border:7px solid;
+      border-left-color:black;
+      border-top-color:transparent;
+      border-right-color:transparent;
+      border-bottom-color:transparent;
+      position: absolute;
+      top:15px;
+      left:0;   
+      display: none;
+    }
+    .left:after {
+      text-align:center;
+      content:"Whats up!";
+      background-color: black;
+      border-radius:5px;
+      font-size:10px;
+      white-space: nowrap;
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      top:8px;
+      left:-100px;
+      margin-left:auto;
+      margin-right:auto;
+      visibility:hidden;
+    }
+  .left:hover:before {
+    transform:translateX(-20px);
+    transition: 1.5s linear;
+    display: inline-block;
+  }
+  .left:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  .right:before {
+      content:"";
+      width: 1px;
+      height: 0;
+      border:7px solid;
+      border-right-color:black;
+      border-top-color:transparent;
+      border-left-color:transparent;
+      border-bottom-color:transparent;
+      position: absolute;
+      top:17px;
+      right:0;   
+      display: none;
+    }
+    .right:after {
+      text-align:center;
+      content:"Whats up!";
+      background-color: black;
+      border-radius:5px;
+      font-size:10px;
+      white-space: nowrap;
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      top:10px;
+      left:175px;
+      margin-left:auto;
+      margin-right:auto;
+      visibility:hidden;
+    }
+  .right:hover:before {
+    transform:translateX(15px);
+    transition: 1.5s linear;
+    display: inline-block;
+  }
+  .right:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  .small {
+    width: 195px;
+    height: 46.78px;
+    xwhite-space: nowrap;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    line-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+    
+  }
+  .small:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:45%;   
+    display: none;
+  }
+  .small:after {
+    text-align:center;
+    content:"Hi";
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    white-space: nowrap;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    top:-50px;
+    left:30%;
+    margin-left:auto;
+    margin-right:auto;
+    visibility:hidden;
+  }
+  .small:hover:before {
+    transform:translateY(-20px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .small:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  .medium {
+    width: 215px;
+    height: 46.78px;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    line-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+  }
+  .medium:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:45%;   
+    display: none;
+  }
+  .medium:after {
+    content:"Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done.";   
+    text-align:center;
+    letter-spacing:normal;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    position: absolute;
+    width: 70%;
+    height: 200%;
+    line-height: 1.5em;
+    top:-360%;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    padding:10px;
+    visibility:hidden;
+  }
+ 
+  .medium:hover:before {
+    transform:translateY(-14px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .medium:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  
+  .large {
+    height: 46.78px;
+    width: 190px;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    xline-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+  }
+  .large:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:45%;   
+    display:none;
+  }
+  .large:after {
+    content:"What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!";
+    text-align:center;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    position: absolute;
+    width: 260px;
+    height: 115px;
+    top:-275%;
+    left:-20%;
+    white-space: normal;
+    line-height:normal;
+    padding:8px 12px;
+    visibility:hidden;
+  }
+ 
+  .large:hover:before {
+    transform:translateY(-14px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .large:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  
+  .xlarge {
+    height: 46.78px;
+    width: 200px;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    line-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+  }
+  .xlarge:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:48%;   
+    display:none;
+  }
+  .xlarge:after {
+    content:"What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!";
+    text-align:center;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    position: absolute;
+    width: 475px;
+    height: 60px;
+    top:-160%;
+    left:-65%;
+    white-space: normal;
+    line-height:normal;
+    padding:5px 12px;
+    visibility:hidden;
+  }
+ 
+  .xlarge:hover:before {
+    transform:translateY(-14px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .xlarge:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  
+  .fit {
+    width: 260px;
+    height: 46.78px;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    line-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+  }
+  .fit:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:48%;   
+    display:none;
+  }
+  
+  .fit:after {
+    content:"What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!";
+    text-align:center;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom:60px;
+    left:0;
+    white-space: normal;
+    line-height:normal;
+    padding:8px 12px;
+    visibility:hidden;
+  }
+ 
+  .fit:hover:before {
+    transform:translateY(-14px);
+    transition:1.5s linear;
+    display: inline-block;
+  }
+  .fit:hover:after {
+    transition:visibility 1.5s linear; 
+    visibility:visible;
+  }
+  
+  .visible {
+    width:170px;
+    height: 46.78px;
+    background-color: rgb(255, 61, 46);
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    line-height:46.78px;
+    font-size:16px;
+    font-weight:400;
+    position: relative;
+    margin-left:150px;
+    margin-top:50px;
+    margin-bottom:50px;
+    
+  }
+  .visible:before {
+    content:"";
+    width: 1px;
+    height: 0;
+    border:7px solid;
+    border-top-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top:0;
+    left:45%;   
+    display: inline-block;
+    transform:translateY(-12px);
+  }
+  .visible:after {
+    text-align:center;
+    content:"I am always visible!";
+    background-color: black;
+    border-radius:5px;
+    font-size:10px;
+    white-space: nowrap;
+    position: absolute;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    top:-42px;
+    left:12%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+   
+  </style>
+</head>
+<body>
+  <section>
+    <!-- direction -->
+    <div class="up">
+      Hover me!
+    </div>
+    <div class="down">
+      Hover me!
+    </div>
+    <div class="left">
+      Hover me!
+    </div>
+    <div class="right">
+      Hover me!
+    </div>
+    
+    <!-- size -->
+    <div class="small">
+      I'm a small tooltip
+    </div>
+    <div class="medium">
+      I'm a medium tooltip.
+    </div>
+    <div class="large">
+      I'm a large tooltip
+    </div>
+    <div class="xlarge">
+      I'm a Xlarge tooltip
+    </div>
+    <div class="fit">
+      My width will fit to element
+    </div>
+    <!-- visible -->
+    <div class="visible">
+      Always visible!
+    </div>
+  </section>
+  
+  
+</body>
+</html>
