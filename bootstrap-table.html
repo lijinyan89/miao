@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bootstrap-table</title>
+  <style>
+    /* .table */
+    .table {
+      border-collapse:collapse;
+      margin:50px 0;
+      border:hidden;
+    }    
+    .table  td,th {
+      border-left:hidden;
+      border-right:hidden;
+      border-bottom:1px solid #d8d8d8;
+      padding:8px 20px;
+      font-size:16px;
+    } 
+    .table td {
+      border-left:hidden;
+      border-right:hidden;
+      border-bottom:1px solid #d8d8d8;
+      padding:8px 40px;
+      font-size:14px;
+    }
+    .table tr:last-child {
+      border-bottom:hidden;
+    }
+    .table  tr:first-of-type th {
+      padding:8px 40px;
+      border-right:hidden;
+      border-bottom:3px solid #d8d8d8;
+    }   
+    
+    /* .table-striped */
+    
+    .table-striped tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    
+    /* .table-bordered */
+    .table-bordered {
+      border-collapse:collapse;
+      border:1px solid #d8d8d8;
+    }
+    .table-bordered td,th {
+      border:1px solid #d8d8d8;
+    } 
+    .table-bordered  tr:first-of-type th {
+      border-bottom:3px solid #d8d8d8;
+      border-right:1px solid #d8d8d8;
+    } 
+    .table-bordered tr:last-child {
+      border-bottom:1px solid;
+    }   
+ 
+    /* .table-hover */
+    
+    .table-hover tr:nth-child(n+2):hover {
+      background-color: #f3f3f3;
+    }
+    
+   
+  
+  </style>
+</head>
+<body>
+  <table class="table">
+    <tr>
+      <th>#	</th>
+      <th>First Name	</th>
+      <th>Last Name	</th>
+      <th>Username</th>
+    </tr>
+    <tr>
+      <th>1  </th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th>2  </th>
+      <td>Jacob	</td>
+      <td>Thornton	</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th>3  </th>
+      <td>Larry	</td>
+      <td>the Bird	</td>
+      <td>@twitter</td>
+    </tr>
+  </table>
+  
+  <hr>
+  
+  <table class="table table-striped">
+      <tr>
+        <th>#	</th>
+        <th>First Name	</th>
+        <th>Last Name	</th>
+        <th>Username</th>
+      </tr>
+      <tr>
+        <th>1  </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th>2  </th>
+        <td>Jacob	</td>
+        <td>Thornton	</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th>3  </th>
+        <td>Larry	</td>
+        <td>the Bird	</td>
+        <td>@twitter</td>
+      </tr>
+    </table>
+  
+  <hr>
+  
+  <table class="table table-bordered">
+      <tr>
+        <th>#	</th>
+        <th>First Name	</th>
+        <th>Last Name	</th>
+        <th>Username</th>
+      </tr>
+      <tr>
+        <th>1  </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th>2  </th>
+        <td>Jacob	</td>
+        <td>Thornton	</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th>3  </th>
+        <td>Larry	</td>
+        <td>the Bird	</td>
+        <td>@twitter</td>
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <table class="table table-hover">
+      <tr>
+        <th>#	</th>
+        <th>First Name	</th>
+        <th>Last Name	</th>
+        <th>Username</th>
+      </tr>
+      <tr>
+        <th>1  </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th>2  </th>
+        <td>Jacob	</td>
+        <td>Thornton	</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th>3  </th>
+        <td>Larry	</td>
+        <td>the Bird	</td>
+        <td>@twitter</td>
+      </tr>
+    </table>
+    
+  
+</body>
+</html>
