@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>twitter heart</title>
+  <title>twitter-heart</title>
   <style>
     label {
-      display:inline-block;
-      margin:0;
-      border:1px solid;
-      box-sizing:border-box;
+      display: inline-block;
+      width: 100px;
       height: 100px;
-      width:100px;
-      background-image:url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png);
+      background-image: url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png);
     }
-
-    label:hover {
-      transition: background-position  0.46666s linear ;
+    input:checked + label {
       background-position: right 0;
+      transition:2s steps(28);
+      
     }
+    
   </style>
 </head>
 <body>
-  <input hidden type="checkbox" name="twitter" id= "heart">
-  <label for="heart"><img src="" alt=""></label>
+  <input hidden type="checkbox" id="heart">
+  <label for="heart"></label>
 </body>
 </html>
