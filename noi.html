@@ -520,69 +520,59 @@
 
 <script id="ch0105/01" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-var average = (a + b) / n
+  var sum = 0
+  var age = 0
+  for (var i = 0; i < n; i++) {
+    age = +prompt()
+    sum += age
+  }
+var average = sum / n
 console.log(average.toFixed(2))
 </script>
 <script id="ch0105/02" type="x">
-  var m1 = +prompt()
-  var m2 = +prompt()
-  var m3 = +prompt()
-  var m4 = +prompt()
-  var m5 = +prompt()
-  var m6 = +prompt()
-  var m7 = +prompt()
-  var m8 = +prompt()
-  var m9 = +prompt()
-  var m10 = +prompt()
-  var m11 = +prompt()
-  var m12 = +prompt()
-  var average = (m1 + m2 + m3 + m4 + m5 + m6 + m7 + m8 + m9 + m10 + m11 + m12) / 12
+  var sum = 0
+  var remain = 0
+  for (var i = 0; i < 12; i++) {
+    remain = +prompt()
+    sum += remain
+  }
+  var average = sum / 12
   console.log(average.toFixed(2))
 </script>
 <script id="ch0105/03" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var average = (a + b) / n
+  var sum = 0
+  var num = 0
+  for (var i = 0; i < n; i++) {
+    num = +prompt()
+    sum += num
+  }
+  var average = sum / n
 console.log(average.toFixed(4))
 </script>
 <script id="ch0105/04" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var c = +prompt()
-  var d = +prompt()
-  var sum = a + b + c + d
+  var sum = 0
+  var num = 0
+  for (var i = 0; i < n; i++) {
+    num = +prompt()
+    sum += num
+  }
   var average = sum / n
   console.log(sum)
   console.log(average.toFixed(5))
 </script>
 <script id="ch0105/05" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var c = +prompt()
-  var d = +prompt()
-  var e = +prompt()
-  var max_score = -Infinity
-  if (a > max_score) {
-    max_score = a 
+  var num = 0
+  var max = -Infinity
+  for (var i = 0; i < n; i++) {
+    num = +prompt()
+    if (num > max) {
+      max = num
+    }
   }
-  if (b > max_score) {
-    max_score = b 
-  }
-  if (c > max_score) {
-    max_score = c
-  }
-  if (d > max_score) {
-    max_score = d 
-  }
-  if (e > max_score) {
-    max_score = e
-  }
-  console.log(max_score)
+  console.log(max)
 </script>
 <script id="ch0105/06" type="x">
   var n = +prompt()
@@ -668,8 +658,56 @@ console.log(average.toFixed(4))
   }
   console.log(sum)
 </script>
-<script id="ch0105/11" type="">
+<script id="ch0105/11" type="x">
+  var k = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var d = +prompt()
+  var e = +prompt()
+  var count_1 = 0
+  var count_5 = 0
+  var count_10 = 0
   
+  if (a == 1) {
+    count_1++
+  } else if (a == 5) {
+    count_5++
+  } else if (a == 10) {
+    count_10++
+  }
+  if (b == 1) {
+    count_1++
+  } else if (b == 5) {
+    count_5++
+  } else if (b == 10) {
+    count_10++
+  }
+  if (c == 1) {
+    count_1++
+  } else if (c == 5) {
+    count_5++
+  } else if (c == 10) {
+    count_10++
+  }
+  if (d == 1) {
+    count_1++
+  } else if (d == 5) {
+    count_5++
+  } else if (d == 10) {
+    count_10++
+  }
+  if (e == 1) {
+    count_1++
+  } else if (e == 5) {
+    count_5++
+  } else if (e == 10) {
+    count_10++
+  }
+  console.log(count_1)
+  console.log(count_5)
+  console.log(count_10)
+ 
 </script>
 <script id="ch0105/12" type="">
   
