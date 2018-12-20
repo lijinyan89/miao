@@ -191,9 +191,12 @@
    
 </script>
 <script id="ch0103/11" type="x">
-  var a = +prompt() 
-  var b = +prompt() 
-  var r = a - Math.floor(a / b) * b
+
+   var a = +prompt() 
+   var b = +prompt() 
+   a = a * 10000
+   b = b * 10000
+   var remainer = a % b / 10000
   console.log(r.toFixed(4))
 </script>
 <script id="ch0103/12" type="x">
@@ -203,10 +206,10 @@
   console.log(v.toFixed(2)) 
 </script>
 <script id="ch0103/13" type="x">
-  var n = +prompt() 
-  var a = String(n)
-  var b = a[2] + a[1] + a[0]
-  console.log(b)
+  // var n = +prompt() 
+  // var a = String(n)
+  // var b = a[2] + a[1] + a[0]
+  // console.log(b)
 </script>
 <script id="ch0103/14" type="x">
   var pi = 3.14159
@@ -239,12 +242,12 @@
   var y2 = +prompt()
   var x3 = +prompt() 
   var y3 = +prompt()
-  var a = Math.sqrt(Math.abs(x1 - x2)**2 + Math.abs(y1 - y2)**2)
-  var b = Math.sqrt(Math.abs(x1 - x3)**2 + Math.abs(y1 - y3)**2)
-  var c = Math.sqrt(Math.abs(x2 - x3)**2 + Math.abs(y2 - y3)**2)
-  var s = (a + b + c) / 2
-  var A = Math.sqrt(s * (s - a) * (s - b) * (s -c))
-  console.log(A.toFixed(2))
+  var a = Math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+  var b = Math.sqrt((x1 - x3)**2 + (y1 - y3)**2)
+  var c = Math.sqrt((x2 - x3)**2 + (y2 - y3)**2)
+  var p = (a + b + c) / 2
+  var area = Math.sqrt(p * (p - a) * (p - b) * (p -c))
+  console.log(area.toFixed(2))
 </script>
 <script id="ch0103/18" type="x">
   var a1 = +prompt() 
@@ -278,8 +281,10 @@
 </script>
 <script id="ch0104/02" type="x">
   var f = +prompt()
-  var n = Math.abs(f).toFixed(2)
-  console.log(n)
+  if (f < 0) {
+    f = -f
+  }
+  console.log(f.toFixed(2))
 </script>
 <script id="ch0104/03" type="x">
   var n = +prompt()
@@ -336,35 +341,32 @@
   }
 </script>
 <script id="ch0104/09" type="x">
-  var n = +prompt()
-  if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
-    console.log(3 + " " + 5 + " " + 7)
-  } else if (n % 3 == 0 && n % 5 == 0 && n % 7 != 0) {
-    console.log(3 + " " + 5 )
-  } else if (n % 3 == 0 && n % 5 != 0 && n % 7 == 0) {
-    console.log(3 + " " + 7)
-  } else if (n % 3 != 0 && n % 5 == 0 && n % 7 == 0) {
-    console.log( 5 + " " + 7)
-  } else if (n % 3 == 0 && n % 5 != 0 && n % 7 != 0) {
-    console.log(3)
-  } else if (n % 3 != 0 && n % 5 == 0 && n % 7 != 0) {
-    console.log(5)
-  } else if (n % 3 != 0 && n % 5 != 0 && n % 7 == 0) {
-    console.log(7)
-  } else {
-    console.log("n")
+  var n = Number(prompt())
+  if (n % 3 == 0) {
+    console.log("3")
+  } 
+  if (n % 5 == 0) {
+    console.log("5")
   }
+  if (n % 7 == 0) {
+    console.log("7")
+  }
+  
 </script>
 <script id="ch0104/10" type="x">
-  var x = +prompt()
-  var y = +prompt()
-  if (x >= 60 && y >= 60) {
-    console.log("0")
-  } else if (x < 60 && y < 60) {
-    console.log("0")
-  } else {
-    console.log("1")
+   var x = +prompt()
+   var y = +prompt()
+   var fail_count = 0
+  if (x < 60) {
+    fail_count += 1
+  } 
+  if (y < 60) {
+    fail_count += 1
+  }  
+  if (fail_count == 1) {
+    console.log(1)
   }
+  
 </script>
 <script id="ch0104/11" type="x">
   var n = +prompt()
@@ -376,11 +378,11 @@
 </script>
 <script id="ch0104/12" type="x">
   var d = +prompt()
-  var b = d / 3 + 27 + 23
-  var w = d / 1.2
-  if (b < w) {
+  var bike_t = d / 3 + 27 + 23
+  var walk_t = d / 1.2
+  if (bike_t < walk_t) {
     console.log("Bike")
-  } else if (w < b) {
+  } else if (w < bike_t) {
     console.log("Walk")
   } else {
     console.log("All")
@@ -414,17 +416,28 @@
   console.log(c)
 </script>
 <script id="ch0104/15" type="x">
+
   var a = +prompt()
   var b = +prompt()
   var c = +prompt()
-  var max = Math.max(a, b ,c)
+  var max = -Infinity
+  if (a > max) {
+    max = a
+  }
+  if (b > max) {
+    max = a
+  }
+  if (c > max) {
+    max = c
+  }
   console.log(max)
 </script>
 <script id="ch0104/16" type="x">
+
   var a = +prompt()
   var b = +prompt()
   var c = +prompt()
-  if (a**2 + b**2 == c**2) {
+  if (a + b > c && a + c > b && b + c > a) {
     console.log("yes")
   } else {
     console.log("no")
@@ -441,9 +454,7 @@
 <script id="ch0104/18" type="x">
   var x = +prompt()
   var y = +prompt()
-  var d = Math.sqrt(x**2 + y**2) 
-  var r = Math.sqrt(2)
-  if (d <= r) {
+  if (x >= -1 && x <=1 && y >= -1 && y <= 1) {
     console.log("yes")
   } else {
     console.log("no")
@@ -452,24 +463,25 @@
 <script id="ch0104/19" type="x">
   var a = +prompt()
   var b = +prompt()
-  var c = prompt()
-  var n
-  if (b == 0 && c == "/") {
-    console.log("Divided by zero")
-  } else if (c != "+" && c != "-" && c != "*" && c != "/") {
-    console.log("Invalid operator!")
-  } else {
-      if (c == "+") {
-      n = a + b
-    } else if (c == "-") {
-      n = a - b
-    } else if (c == "*") {
-      n = a * b
-    } else {
-      n = a / b
+  var operator = prompt()
+  var result
+  if (operator == "+") {
+    result = a + b
+  } else if (operator == "-") {
+    result = a - b
+  } else if (operator == "*") {
+    result = a * b
+  } else if (operator == "/") {
+    if (b != 0) ｛
+      result = a / b
+    ｝else {
+      result = "Divided by zero" 
     }
-    console.log(n)
+  } else {
+    result = "Invalid operator!"
   }
+  console.log(result)
+ 
  
 </script>
 <script id="ch0104/20" type="x">
@@ -497,10 +509,267 @@
     console.log("x1=" + x1 + ";x2=" + x2)
   }
 </script>
-<script id="ch0104/21" type="">
+<script id="ch0104/21" type="x">
   var n = +prompt()
   var x = +prompt()
   var y = +prompt()
   var r = n - Math.ceil(y / x)
   console.log(r)
+</script>
+
+
+<script id="ch0105/01" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+var average = (a + b) / n
+console.log(average.toFixed(2))
+</script>
+<script id="ch0105/02" type="x">
+  var m1 = +prompt()
+  var m2 = +prompt()
+  var m3 = +prompt()
+  var m4 = +prompt()
+  var m5 = +prompt()
+  var m6 = +prompt()
+  var m7 = +prompt()
+  var m8 = +prompt()
+  var m9 = +prompt()
+  var m10 = +prompt()
+  var m11 = +prompt()
+  var m12 = +prompt()
+  var average = (m1 + m2 + m3 + m4 + m5 + m6 + m7 + m8 + m9 + m10 + m11 + m12) / 12
+  console.log(average.toFixed(2))
+</script>
+<script id="ch0105/03" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var average = (a + b) / n
+console.log(average.toFixed(4))
+</script>
+<script id="ch0105/04" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var d = +prompt()
+  var sum = a + b + c + d
+  var average = sum / n
+  console.log(sum)
+  console.log(average.toFixed(5))
+</script>
+<script id="ch0105/05" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var d = +prompt()
+  var e = +prompt()
+  var max_score = -Infinity
+  if (a > max_score) {
+    max_score = a 
+  }
+  if (b > max_score) {
+    max_score = b 
+  }
+  if (c > max_score) {
+    max_score = c
+  }
+  if (d > max_score) {
+    max_score = d 
+  }
+  if (e > max_score) {
+    max_score = e
+  }
+  console.log(max_score)
+</script>
+<script id="ch0105/06" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var d = +prompt()
+  var e = +prompt()
+  var f = +prompt()
+  var max = a
+  var min = a
+
+  if (b > max) 
+    max = b  
+  if (c > max) 
+    max = c
+  if (d > max) 
+    max = d 
+  if (e > max) 
+    max = e
+  if (f > max) 
+    max = f
+  
+  if (b < min) 
+    min = b 
+  if (c < min) 
+    min = c
+  if (d < min) 
+    min = d 
+  if (e < min) 
+    min = e
+  if (f < min) 
+    min = f
+  console.log(max - min)
+</script>
+<script id="ch0105/07" type="x">
+  var n = +prompt()
+  var a1 = +prompt()
+  var b1 = +prompt()
+  var c1 = +prompt()
+  var a2 = +prompt()
+  var b2 = +prompt()
+  var c2 = +prompt()
+  var a3 = +prompt()
+  var b3 = +prompt()
+  var c3 = +prompt()
+  var a = a1 + a2 + a3
+  var b = b1 + b2 + b3
+  var c = c1 + c2 + c3
+  var total = a + b + c
+  console.log(a)
+  console.log(b)
+  console.log(c)
+  console.log(total)
+</script>
+<script id="ch0105/08" type="x">
+  var n = +prompt()
+  var a = +prompt()
+  var b = +prompt()
+  var total = (n - 2) * 180
+  var c = total - a - b
+  console.log(c)
+</script>
+<script id="ch0105/09" type="x">
+  var m = +prompt()
+  var n = +prompt()
+  var odd_sum = 0
+  for (var i = m; i <= n; i++) {
+    if (i % 2 != 0) {
+      odd_sum += i
+    }
+  }
+  console.log(odd_sum)
+</script>
+<script id="ch0105/10" type="x">
+  var m = +prompt()
+  var n = +prompt()
+  var sum = 0
+  for (var i = m; i <= n; i++) {
+    if (i % 17 == 0) {
+      sum += i
+    }
+  }
+  console.log(sum)
+</script>
+<script id="ch0105/11" type="">
+  
+</script>
+<script id="ch0105/12" type="">
+  
+</script>
+<script id="ch0105/13" type="">
+  
+</script>
+<script id="ch0105/14" type="">
+  
+</script>
+<script id="ch0105/15" type="">
+  
+</script>
+<script id="ch0105/16" type="">
+  
+</script>
+<script id="ch0105/17" type="">
+  
+</script>
+<script id="ch0105/18" type="">
+  
+</script>
+<script id="ch0105/19" type="">
+  
+</script>
+<script id="ch0105/20" type="">
+  
+</script>
+<script id="ch0105/21" type="">
+  
+</script>
+<script id="ch0105/22" type="">
+  
+</script>
+<script id="ch0105/23" type="">
+  
+</script>
+<script id="ch0105/24" type="">
+  
+</script>
+<script id="ch0105/25" type="">
+  
+</script>
+<script id="ch0105/26" type="">
+  
+</script>
+<script id="ch0105/27" type="">
+  
+</script>
+<script id="ch0105/28" type="">
+  
+</script>
+<script id="ch0105/29" type="">
+  
+</script>
+<script id="ch0105/30" type="">
+  
+</script>
+<script id="ch0105/31" type="">
+  
+</script>
+<script id="ch0105/32" type="">
+  
+</script>
+<script id="ch0105/33" type="">
+  
+</script>
+<script id="ch0105/34" type="">
+  
+</script>
+<script id="ch0105/35" type="">
+  
+</script>
+<script id="ch0105/36" type="">
+  
+</script>
+<script id="ch0105/37" type="">
+  
+</script>
+<script id="ch0105/38" type="">
+  
+</script>
+<script id="ch0105/39" type="">
+  
+</script>
+<script id="ch0105/40" type="">
+  
+</script>
+<script id="ch0105/41" type="">
+  
+</script>
+<script id="ch0105/42" type="">
+  
+</script>
+<script id="ch0105/43" type="">
+  
+</script>
+<script id="ch0105/44" type="">
+  
+</script>
+<script id="ch0105/45" type="">
+  
 </script>
