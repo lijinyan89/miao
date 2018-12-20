@@ -576,65 +576,54 @@ console.log(average.toFixed(4))
 </script>
 <script id="ch0105/06" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var c = +prompt()
-  var d = +prompt()
-  var e = +prompt()
-  var f = +prompt()
-  var max = a
-  var min = a
-
-  if (b > max) 
-    max = b  
-  if (c > max) 
-    max = c
-  if (d > max) 
-    max = d 
-  if (e > max) 
-    max = e
-  if (f > max) 
-    max = f
+  var max = -Infinity
+  var min = Infinity
+  var num = 0
+  for (var i = 0; i < n; i++) {
+    num = +prompt()
+    if (num > max) {
+      max = num
+    }
+    if (num < min) {
+      min = num
+    }
+  }
+  console.log(max -min)
   
-  if (b < min) 
-    min = b 
-  if (c < min) 
-    min = c
-  if (d < min) 
-    min = d 
-  if (e < min) 
-    min = e
-  if (f < min) 
-    min = f
-  console.log(max - min)
 </script>
 <script id="ch0105/07" type="x">
   var n = +prompt()
-  var a1 = +prompt()
-  var b1 = +prompt()
-  var c1 = +prompt()
-  var a2 = +prompt()
-  var b2 = +prompt()
-  var c2 = +prompt()
-  var a3 = +prompt()
-  var b3 = +prompt()
-  var c3 = +prompt()
-  var a = a1 + a2 + a3
-  var b = b1 + b2 + b3
-  var c = c1 + c2 + c3
-  var total = a + b + c
-  console.log(a)
-  console.log(b)
-  console.log(c)
+  var gold = 0
+  var silver = 0
+  var copper = 0
+  var g_total = 0
+  var s_total = 0
+  var c_total = 0
+  for (var i = 0; i < n; i++) {
+    gold = +prompt()
+    silver = +prompt()
+    copper = +prompt()
+    g_total += gold
+    s_total += silver
+    c_total += copper
+  }
+  var total = g_total + s_total + c_total
+  console.log(g_total)
+  console.log(s_total)
+  console.log(c_total)
   console.log(total)
 </script>
 <script id="ch0105/08" type="x">
   var n = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var total = (n - 2) * 180
-  var c = total - a - b
-  console.log(c)
+  var angle = 0
+  var all = (n - 2) * 180
+  var total = 0
+  for (var i = 0; i < n - 1; i++) {
+    angle = +prompt()
+    total += angle
+  }
+  var remain = all - total
+  console.log(remain)
 </script>
 <script id="ch0105/09" type="x">
   var m = +prompt()
@@ -660,49 +649,18 @@ console.log(average.toFixed(4))
 </script>
 <script id="ch0105/11" type="x">
   var k = +prompt()
-  var a = +prompt()
-  var b = +prompt()
-  var c = +prompt()
-  var d = +prompt()
-  var e = +prompt()
   var count_1 = 0
   var count_5 = 0
   var count_10 = 0
-  
-  if (a == 1) {
-    count_1++
-  } else if (a == 5) {
-    count_5++
-  } else if (a == 10) {
-    count_10++
-  }
-  if (b == 1) {
-    count_1++
-  } else if (b == 5) {
-    count_5++
-  } else if (b == 10) {
-    count_10++
-  }
-  if (c == 1) {
-    count_1++
-  } else if (c == 5) {
-    count_5++
-  } else if (c == 10) {
-    count_10++
-  }
-  if (d == 1) {
-    count_1++
-  } else if (d == 5) {
-    count_5++
-  } else if (d == 10) {
-    count_10++
-  }
-  if (e == 1) {
-    count_1++
-  } else if (e == 5) {
-    count_5++
-  } else if (e == 10) {
-    count_10++
+  for ( var i = 0; i < k; i++) {
+    var num = +prompt()
+    if (num == 1) {
+      count_1++
+    } else if (num == 5) {
+      count_5++
+    } else if (num == 10) {
+      count_10++
+    }
   }
   console.log(count_1)
   console.log(count_5)
