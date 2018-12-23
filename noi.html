@@ -1349,9 +1349,32 @@ if (len % 2 != 0) {
     console.log("NO")
   }
 </script>
+
+<script id="complete-numbers" type="x">
+  var num
+  var factor
+  var sum = 0
+  debugger;
+  for (var i = 1; i <= 10000; i++) {
+    num = i
+    for (var j = 1; j < i; j++) {
+      factor = j
+      if (num % factor == 0) {
+        sum += factor
+      } 
+      if (sum > sum) {
+        break
+      }
+    }
+    if (sum == num) {
+      console.log(num)
+    }
+    sum = 0
+  }
+
+</script>
 <script id="prime" type="x">
   var num = +prompt()
-  debugger;
   for (var i = 2; i < num; i++) {
     if (num % i == 0) {
       console.log("NO")
@@ -1361,4 +1384,123 @@ if (len % 2 != 0) {
       console.log("YES")
     }
   }
+</script>
+
+<script id="primes" type ="x">
+  for (var i = 2; i < 100; i++) {
+    if (i == 2) {
+      console.log(2)
+    }
+    for (var j = 2; j < i; j++) {
+      if (i % j == 0) {
+        break
+      }
+      if (j == i - 1) {
+        console.log(i)
+      }
+    }
+  }
+</script>
+
+<script id="narcissistic" type="x">
+  var n = +prompt()
+  var str = String(n)
+  var l = str.length
+  var digit
+  var item
+  var result = 0
+  var num = n
+  for (var i = 0 ; i < l; i++) {
+    digit = num % 10
+    num = (num - digit) / 10
+    item = digit**l
+    result += item
+  }
+  if (result == n) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+  
+</script>
+
+<script id="narcissistics" type="x">
+  var num
+  var str,l
+  var digit 
+  var item 
+  var result
+  for (var i = 100; i <= 100000; i++) {
+    num = i 
+    result = i
+    str = String(num)
+    l = str.length
+    for (var j = num; num > 0;) {
+      digit = num % 10
+      num = (num - digit) / 10 
+      item = digit**l
+      result -= item 
+      if (result < 0) {
+        break
+      }
+    }
+    if (result == 0) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="sort" type="x">
+  var temp
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  if (a > b) {
+    temp = a
+    a = b 
+    b = temp
+  }
+  if (b > c) {
+    temp = b 
+    b = c 
+    c = temp
+  }
+  console.log(a + " " + b + " " + c)
+</script>
+
+<script id="weekday">
+  // var year = +prompt()
+  var month = +prompt()
+  var days = 0
+  var week
+  
+  var Jan_days = 31
+  var Feb_days = 28 
+  var Mar_days = 31
+  var Apr_days = 30
+  var May_days = 31 
+  var Jun_days = 30
+  var Jul_days = 31
+  var Aug_days = 31
+  var Sep_days = 30
+  var Oct_days = 31
+  var Nov_days = 31
+  var Dec_days = 31
+  debugger;
+ array = [31,28,31,30,31,30,31,31,30,31,31,31]
+ 
+ for (var i = 1; i < 12; i++) {
+   days += 
+    
+ }
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
 </script>
