@@ -1402,7 +1402,7 @@ if (len % 2 != 0) {
   }
 </script>
 
-<script id="narcissistic" type="x">
+<script id="narcissistic " type="x">
   var n = +prompt()
   var str = String(n)
   var l = str.length
@@ -1555,11 +1555,70 @@ if (len % 2 != 0) {
 
 </script>
 
-<script id="sqrt" type="">
+<script id="sqrt" type="x">
+  var item
   var num = +prompt()
-  
-  
-  
+  if (num == 1) {
+    item = 1
+    item = item.toFixed(3)
+    console.log(item)
+  }  
+  if (num > 1) {
+    for (var i = 1; i < num; i += 0.000001) {
+      item = i
+      if (num / item - item < 0.00000001 ) {
+        item = item.toFixed(3)
+        console.log(item)
+        break
+      } 
+    }
+  } 
+  if (num <  1) { 
+    for (var j = num; j > 0; j -= 0.00001) {
+      item = j  
+      if (item - num / item  < 0.00001) {
+        item = item.toFixed(3)
+        console.log(item)
+        break
+      }
+    }
+  }
+
+</script>
+
+<script id="round" type="x">
+  var n = +prompt()
+  var m = Math.floor(n)
+  if (n % 1 >= 0.5) {
+    m += 1
+  }
+  console.log(m)
+</script>
+
+<script id="c&a">
+  // var m = +prompt()
+  // var n = +prompt()
+  // var item_A
+  // var result_A = 1
+  // var item_C
+  // var result_C = 1
+  // // A = m!/(m - n)!
+  // for (var i = m; i >= 1; i--) {
+  //   for (var j = n; j >= 1; j--) {
+  //     item_A = i / (i - j)
+  //     result_A *= item_A
+  //   }
+  // }
+  // console.log(result_A)
+
+  // // C = m!/n!(m - n)!
+  // // for (var i = m; i >= 1; i--) {
+  // //   for (var j = n; j >= 1; j--) {
+  // //     item_C = i / ((i - j) * j)
+  // //     result_C *= item_C
+  // //   }
+  // // }
+  // // console.log(result_C)
   
   
 </script>
