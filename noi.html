@@ -1468,36 +1468,95 @@ if (len % 2 != 0) {
   console.log(a + " " + b + " " + c)
 </script>
 
-<script id="weekday">
+<script id="weekday" type="x">
   // var year = +prompt()
   var month = +prompt()
   var days = 0
   var week
   
-  var Jan_days = 31
-  var Feb_days = 28 
-  var Mar_days = 31
-  var Apr_days = 30
-  var May_days = 31 
-  var Jun_days = 30
-  var Jul_days = 31
-  var Aug_days = 31
-  var Sep_days = 30
-  var Oct_days = 31
-  var Nov_days = 31
-  var Dec_days = 31
-  debugger;
- array = [31,28,31,30,31,30,31,31,30,31,31,31]
+  // var Jan_days = 31
+  // var Feb_days = 28 
+  // var Mar_days = 31
+  // var Apr_days = 30
+  // var May_days = 31 
+  // var Jun_days = 30
+  // var Jul_days = 31
+  // var Aug_days = 31
+  // var Sep_days = 30
+  // var Oct_days = 31
+  // var Nov_days = 31
+  // var Dec_days = 31
+ array = [1,31,28,31,30,31,30,31,31,30,31,31]
  
- for (var i = 1; i < 12; i++) {
-   days += 
-    
+ for (var i = 0; i < month; i++) {
+   days += array[i]  
  }
+ week = days % 7 
+ if (week == 0) {
+   week = 7
+ }
+ console.log(week)
+
+</script>
+
+<script id="itob" type="x">
+  var str = prompt()
+  var l = str.length
+  var item
+  var sum = 0
+  for (var i = 0; i < l; i++) {
+    item = str[i] * 10**(l - i -1)
+    sum += item
+  }
+  console.log(sum)
  
- 
- 
+</script>
+
+<script id="lcf&lcm" type="x">
+  var a = +prompt()
+  var b = +prompt()
+  var max = Math.max(a,b)
+  var times = a * b 
+  var m,n
   
-  
+  for (var i = max; i <= times; i++) {
+    m = i  
+    if (m % a == 0 && m % b == 0) {
+      console.log(m)
+      break
+    }
+  }
+  for (var j = 2; j <= max; j++) {
+    n = j 
+    if (a % n == 0 && b % n == 0) {
+      console.log(n)
+      break
+    }
+  }
+
+</script>
+
+<script id="7" type="x">
+  var num,digit
+  for (var i = 1; i <= 100; i++) {
+    num = i 
+    if (num % 7 == 0) {
+      console.log(num)
+    } else {
+      while (num > 0) {
+        digit = num % 10
+        num = (num - digit) / 10
+        if (digit == 7) {
+          console.log(i)
+        }
+      }
+    }  
+  }
+
+</script>
+
+<script id="sqrt" type="">
+  var num = +prompt()
   
   
   
