@@ -577,8 +577,8 @@ console.log(average.toFixed(4))
 </script>
 <script id="ch0105/06" type="x">
   var n = +prompt()
-  var max = -Infinity
-  var min = Infinity
+  var max = 1000
+  var min = 0
   var num = 0
   for (var i = 0; i < n; i++) {
     num = +prompt()
@@ -589,7 +589,7 @@ console.log(average.toFixed(4))
       min = num
     }
   }
-  console.log(max -min)
+  console.log(max - min)
   
 </script>
 <script id="ch0105/07" type="x">
@@ -706,32 +706,30 @@ console.log(average.toFixed(4))
   var k = +prompt()
   var cost = 200
   var total = n
-  var m
-  for (var i = 2; i <= 20; i++) {
+  var year = -1 
+  for (var i = 1/2; i <= 20; i++) {
     cost *= 1 + k * 0.01
     total += n
     if (total >= cost) {
-      m = i
+      year = i
       break
     } 
   }
-  if (m) {
-    console.log(m)
+  if (year != -1) {
+    console.log(year)
   } else {
     console.log("Impossible")
   }
 </script>
 <script id="ch0105/17" type="x">
-  var k = +prompt()
-  var first = 1
-  var next = 1
-  var cur
-  for (var i = 0; i < k - 2; i++) {
-     cur = first + next
-     first = next
-     next = cur
-  }
-  console.log(cur)
+var k = +prompt()
+var a = 1
+var b = 1
+for (var i = 1; i < k; i++) {
+  b = a + b 
+  a = b - a
+}
+console.log(a)
 </script>
 <script id="ch0105/18" type="x">
    var n = +prompt()
@@ -842,41 +840,44 @@ console.log(average.toFixed(4))
   }
   console.log(count)
 </script>
-<script id="ch0105/24" type="x">
+<script id="ch0105/24" type="x ">
   var n = +prompt("hour")
-  var high
-  var low
   var count = 0
   var max = 0
   for (var i = 0; i < n; i++) {
-    high = +prompt("h"+ (i+1))
-    low = +prompt("l"+ (i+1))
-    if (high >= 90 && high <= 140 && low >= 60 && low <= 90) {
+    var high = +prompt("h"+ (i+1))
+    var low = +prompt("l"+ (i+1))
+    var isNormal = (high >= 90 && high <= 140 && low >= 60 && low <= 90)
+    if (isNormal) {
       count++ 
-      max = count 
     } else {
       if (count > max) {
         max = count 
       }
       count = 0
-    }   
-  }
+    }  
+    if (count > max) {
+      max = count
+    }
+  } 
   console.log(max)
 </script>
 <script id="ch0105/25" type="x">
- var x,y,z
- var result
- for (var i = 1; i < 7; i++) {
-   z = i
-   for (var j =1; j < 7; j++) {
-     x = j
-     y = 24 * x - 40 * z
-     if (x != 0 && z != 0 && y >= 0 && y < 7) {
-       result = x * 7**2 + y * 7 + z
-       console.log(result) 
-     }
-   }
- }
+for (var i = 81; i <= 350; i++) {
+  var n = i
+
+  d70 = n % 7
+  d71 = (n - d70) / 7 % 7
+  d72 = (n - d70 - d71 * 7) / 7 / 7 % 7
+
+  d90 = n % 9
+  d91 = (n - d90) / 9 % 9
+  d92 = (n - d90 - d91 * 9) / 9 / 9 % 9
+
+  if ((d70 == d92) && (d71 == d91) && (d72 == d90)) {
+    console.log(i)
+  }
+}
   
 </script>
 <script id="ch0105/26" type="x">
@@ -885,7 +886,6 @@ console.log(average.toFixed(4))
   var bit
   var sum = 0
   var count = 0
-  debugger;
   for (var i = 0; i < n; i++) {
     num = +prompt()
     bit = num % 10
@@ -958,7 +958,6 @@ console.log(average.toFixed(4))
     if (digit == 3) {
       count++
     }
-    digit = 0
   }
   if (m % 19 == 0 && count == k) {
     console.log("YES")
@@ -968,6 +967,8 @@ console.log(average.toFixed(4))
   
 </script>
 <script id="ch0105/31" type="x">
+
+parseInt(Math.sqrt(n)) == Math.sqrt(n)
   var n = +prompt()
   var m = +prompt()
   var count = 0
@@ -975,7 +976,7 @@ console.log(average.toFixed(4))
   var people
  for (var i = 1; i <= n; i++) {
    light = i
-   for (var j = 1; j <= m; j++) {
+   for (var j = 1; j <= m && j < i; j++) {
      people = j
      if (light % people == 0) {
        count++
@@ -1028,13 +1029,8 @@ console.log(average.toFixed(4))
   var item = 1
   var sum = 0
   for (var i = 1; i <= n; i++) {
-    num = i
-    for (var j = 1; j <= num; j++) {
-      index = j
-      item *= index
-    }
+    item *= i
     sum += item
-    item = 1
   }
   console.log(sum)
 
@@ -1057,16 +1053,14 @@ console.log(average.toFixed(4))
   
 </script>
 <script id="ch0105/36" type="x">
+
   var x = +prompt()
   var n = +prompt()
   var item = 1
-  var sum = 0
-  for (var i = n ; i >= 0; i--) {
-    for (var j = i ; j > 0; j--) {
-      item *= x
-    }
+  var sum = 1
+  for (var i = n ; i > 0; i--) {
+    item *= x
     sum += item
-    item = 1
   }
   console.log(sum.toFixed(2))
  
@@ -1093,22 +1087,17 @@ console.log(average.toFixed(4))
 </script>
 <script id="ch0105/38" type="x">
   var n = +prompt()
-  var k
   var item
-  var f
-  debugger;
-  // if (k == 0) {
-  //   console.log(0)
-  // }
-  for (var i = n; i >= 0; i--) {
+  
+  for (var i = n; i > 0; i--) {
     k = +prompt()
-    item = k * i 
+    item = k * n 
     console.log(item)
-    item = 0
   }
   
 </script>
 <script id="ch0105/39" type="x">
+
   var n = +prompt()
   var num,digit
   var item, sum = 0
@@ -1130,7 +1119,19 @@ console.log(average.toFixed(4))
       }    
     }       
   console.log(sum)
-  
+
+  function base(n,x) {
+    var result = ""
+    var digit
+    var digits = "0123456789abcdef"
+    while (n > 0) {
+      digit = n % x 
+      result = digits[digit] + result
+      n = (n - digit) / x
+    }
+    return result
+  }
+
 </script>
 <script id="ch0105/40" type="x">
   var n = +prompt()
@@ -1193,21 +1194,35 @@ console.log(average.toFixed(4))
   
 </script>
 <script id="ch0105/43" type="x">
-  var n = +prompt()
-  var prime 
-  var result
-  for (var i = n; i > 1; i--) {
-    for (var j = 2; j < i; j++) {
-      if (i % j == 0) {
+var isPrime = function(n) {
+    if (n == 1) {
+      return false
+    }
+    let i
+    let sqrt = Math.sqrt(n)
+    for (i = 2; i <= sqrt; i++) {
+      if (n % i == 0) {
         break
-      } 
-      if (j == i - 1 && n % i == 0) {
-        prime = i
-        result = Math.max( prime, n / prime)
       }
+    } 
+    if (i >= sqrt ) {
+     return true
+    } else {
+     return false
+    }
+  } 
+  
+function factor(n) {
+  let result
+  let prime 
+  for (let i = 1; i <= n; i++) {
+    if (isPrime(i) && n % i == 0) {
+      result = Math.max(i, n / i)
     }
   }
-console.log(result)
+  return result
+}
+factor(+prompt())
 
 </script>
 <script id="ch0105/44" type="x">
@@ -1348,6 +1363,21 @@ if (len % 2 != 0) {
   } else {
     console.log("NO")
   }
+  
+  
+  var isCompleteNumber = function(n) {
+    let sum = 0
+    for (let i = 1; i < n; i++) {
+      if (n % i == 0) {
+        sum += i
+      }
+    }
+    if (sum == n) {
+      console.log(true)
+    } else {
+      console.log(false)
+    }
+  }
 </script>
 
 <script id="complete-numbers" type="x">
@@ -1369,40 +1399,58 @@ if (len % 2 != 0) {
     if (sum == num) {
       console.log(num)
     }
-    sum = 0
+    sum = 0 
   }
 
 </script>
 <script id="prime" type="x">
-  var num = +prompt()
-  for (var i = 2; i < num; i++) {
-    if (num % i == 0) {
-      console.log("NO")
-      break
+  var isPrime = function(n) {
+    if (n == 1) {
+      return false
+    }
+    let i
+    let sqrt = Math.sqrt(n)
+    for (i = 2; i <= sqrt; i++) {
+      if (n % i == 0) {
+        break
+      }
+    } 
+    if (i >= sqrt ) {
+     return true
     } else {
-      if (i = num - 1) {}
-      console.log("YES")
+     return false
     }
   }
+  console.log(+prompt)
 </script>
 
 <script id="primes" type ="x">
-  for (var i = 2; i < 100; i++) {
-    if (i == 2) {
-      console.log(2)
+    var isPrime = function(n) {
+      if (n == 1) {
+        return false
+      }
+      let i
+      let sqrt = Math.sqrt(n)
+      for (i = 2; i <= sqrt; i++) {
+        if (n % i == 0) {
+          break
+        }
+      } 
+      if (i >= sqrt ) {
+       return true
+      } else {
+       return false
+      }
     }
-    for (var j = 2; j < i; j++) {
-      if (i % j == 0) {
-        break
-      }
-      if (j == i - 1) {
-        console.log(i)
-      }
+  for (var i = 2; i < 100; i++) {
+    if (isPrime(i)) {
+      console.log(i)
     }
   }
 </script>
 
 <script id="narcissistic " type="x">
+  
   var n = +prompt()
   var str = String(n)
   var l = str.length
@@ -1469,23 +1517,11 @@ if (len % 2 != 0) {
 </script>
 
 <script id="weekday" type="x">
-  // var year = +prompt()
+  var year = +prompt()
   var month = +prompt()
   var days = 0
   var week
-  
-  // var Jan_days = 31
-  // var Feb_days = 28 
-  // var Mar_days = 31
-  // var Apr_days = 30
-  // var May_days = 31 
-  // var Jun_days = 30
-  // var Jul_days = 31
-  // var Aug_days = 31
-  // var Sep_days = 30
-  // var Oct_days = 31
-  // var Nov_days = 31
-  // var Dec_days = 31
+
  array = [1,31,28,31,30,31,30,31,31,30,31,31]
  
  for (var i = 0; i < month; i++) {
@@ -1595,30 +1631,30 @@ if (len % 2 != 0) {
   console.log(m)
 </script>
 
-<script id="c&a">
-  // var m = +prompt()
-  // var n = +prompt()
-  // var item_A
-  // var result_A = 1
-  // var item_C
-  // var result_C = 1
-  // // A = m!/(m - n)!
-  // for (var i = m; i >= 1; i--) {
-  //   for (var j = n; j >= 1; j--) {
-  //     item_A = i / (i - j)
-  //     result_A *= item_A
-  //   }
-  // }
-  // console.log(result_A)
+<script id="c&a" type="">
+  var m = +prompt()
+  var n = +prompt()
+  var item_A
+  var result_A = 1
+  var item_C
+  var result_C = 1
 
-  // // C = m!/n!(m - n)!
-  // // for (var i = m; i >= 1; i--) {
-  // //   for (var j = n; j >= 1; j--) {
-  // //     item_C = i / ((i - j) * j)
-  // //     result_C *= item_C
-  // //   }
-  // // }
-  // // console.log(result_C)
+  for (var i = m; i >= 1; i--) {
+    for (var j = n; j >= 1; j--) {
+      item_A = i / (i - j)
+      result_A *= item_A
+    }
+  }
+  console.log(result_A)
+
+
+  for (var i = m; i >= 1; i--) {
+    for (var j = n; j >= 1; j--) {
+      item_C = i / ((i - j) * j)
+      result_C *= item_C
+    }
+  }
+  console.log(result_C)
   
   
 </script>
